@@ -91,6 +91,8 @@ DRIVERS = {
         ('libcloud.compute.drivers.openstack', 'OpenStack_1_0_NodeDriver'),
     Provider.NINEFOLD:
         ('libcloud.compute.drivers.ninefold', 'NinefoldNodeDriver'),
+    Provider.OPENNEBULA_OCA:
+        ('libcloud.compute.drivers.opennebulaoca', 'OpenNebulaOCANodeDriver')
 }
 
 def get_driver(provider):
