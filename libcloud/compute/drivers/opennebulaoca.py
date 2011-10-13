@@ -256,9 +256,10 @@ class OpenNebulaOCANodeDriver(NodeDriver):
         return Node(id=oca_vm.id,
                     name=oca_vm.name,
                     state=state,
-                    public_ip=networks,
+                    public_ip=networks[0],
                     private_ip=[],
-                    driver=self.connection.driver)
+                    driver=self.connection.driver,
+                    extra=vars(oca_vm))
 
 class OneTemplate(object):
     INDENT = ' ' * 4
